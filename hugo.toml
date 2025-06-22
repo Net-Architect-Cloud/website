@@ -1,0 +1,17 @@
+baseURL = "https://netarchitect.cloud/"
+languageCode = "fr"
+title = "Net Architect"
+theme = "hugo-clarity"
+enableRobotsTXT = true
+
+[params]
+  description = "Blog technique sobre et élégant par Kevin Allioli"
+  author = "Kevin Allioli"
+  darkMode = true
+  showReadingTime = true
+  showToc = true
+
+[markup]
+  [markup.highlight]
+    style = "github"
+    noClasses = false
