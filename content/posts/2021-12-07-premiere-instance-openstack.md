@@ -123,7 +123,7 @@ sudo poweroff
 > 👉 [https://youtu.be/DsJk0-g4nnI](https://youtu.be/DsJk0-g4nnI)  
 > — [@linit_io](https://twitter.com/linit_io/status/1468252426524409861)
 
-{{< embedtweet https://twitter.com/linit_io/status/1468252426524409861 >}}
+{{< embedtweet "https://twitter.com/linit_io/status/1468252426524409861" >}}
 
 ---
 
