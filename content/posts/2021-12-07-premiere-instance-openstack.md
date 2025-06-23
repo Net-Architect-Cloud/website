@@ -15,7 +15,6 @@ Dans ce tutoriel, je vais vous montrer comment créer votre première instance s
 
 📺 [Voir la vidéo sur YouTube](https://www.youtube.com/watch?v=DsJk0-g4nnI)
 
----
 
 ## 🛠️ Prérequis
 
@@ -23,14 +22,12 @@ Pour suivre ce tutoriel, vous aurez besoin :
 - D'un compte Infomaniak **(offre de 300 CHF valable 3 mois pour tester)**
 - Ou d'un accès à une plateforme OpenStack
 
----
 
 ## 🌐 Connexion à la plateforme
 
 1. Connectez-vous au portail Horizon d'Infomaniak avec vos identifiants
 2. Une fois connecté, vous accédez au dashboard qui affiche vos ressources actuelles
 
----
 
 ## 💻 Création de l'instance
 
@@ -49,7 +46,6 @@ Pour suivre ce tutoriel, vous aurez besoin :
    - Disque
    - Performance disque (Perf 1 pour un usage standard)
 
----
 
 ## 🛜 Configuration réseau
 
@@ -57,7 +53,6 @@ Pour suivre ce tutoriel, vous aurez besoin :
    - `ext-net1` pour avoir une IPv4 et IPv6
    - `ext-v6only1` pour uniquement IPv6
 
----
 
 ## 🔐 Sécurité et accès
 
@@ -68,7 +63,6 @@ Pour suivre ce tutoriel, vous aurez besoin :
    - Téléchargez la clé privée
    - Sauvegardez-la en tant que fichier `.pem`
 
----
 
 ## 🚀 Se connecter à l'instance
 
@@ -78,13 +72,12 @@ Une fois l'instance créée, connectez-vous en SSH :
 ssh -i mykey.pem ubuntu@<IP_ADDRESS>
 ```
 
-⚠️ Remplacez :
+⚠️  Remplacez :
 - `mykey.pem` par le chemin vers votre clé privée
 - `<IP_ADDRESS>` par l'adresse IP publique de votre instance
 
----
 
-## ⚙️ Gestion de l'instance
+## ⚙️  Gestion de l'instance
 
 Quelques commandes utiles une fois connecté :
 
@@ -97,7 +90,6 @@ sudo apt dist-upgrade
 sudo poweroff
 ```
 
----
 
 ## ⭐️ Points importants
 
@@ -108,25 +100,18 @@ sudo poweroff
   - Debian : `debian`
   - CentOS : `centos`
 
----
 
-## 📚 Documentation
+## 📚 Documentation supplémentaire
 
 - [Documentation OpenStack](https://docs.openstack.org/)
 - [Documentation Infomaniak](https://docs.infomaniak.cloud/)
 
----
 
-## 🐦 Tweet lié
-
-> Hello, je vous propose aujourd'hui de découvrir comment déployer vos instances sur une plateforme OpenStack. Bon visionnage ! 😉  
-> 👉 [https://youtu.be/DsJk0-g4nnI](https://youtu.be/DsJk0-g4nnI)  
-> — [@linit_io](https://twitter.com/linit_io/status/1468252426524409861)
+## 🐦 On en parle ici
 
 {{< embedtweet "https://twitter.com/linit_io/status/1468252426524409861" >}}
 
----
 
 ## 🔗 Autres tutoriels
 
-⚙️ Retrouvez tous nos tutoriels sur [https://linit.io](https://linit.io)
+⚙️  Retrouvez tous nos tutoriels sur [https://linit.io](https://linit.io)
