@@ -11,6 +11,8 @@ draft: false
 
 Dans ce tutoriel, je vais vous montrer comment créer votre première instance sur OpenStack en utilisant le cloud public Infomaniak. Bien que j'utilise la plateforme Infomaniak pour cette démonstration, les étapes sont similaires sur n'importe quelle plateforme OpenStack.
 
+{{< youtube DsJk0-g4nnI >}}
+
 📺 [Voir la vidéo sur YouTube](https://www.youtube.com/watch?v=DsJk0-g4nnI)
 
 ---
