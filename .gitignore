@@ -1,1 +1,19 @@
-public/
+# Hugo build output
+/public/
+/resources/
+
+# Hugo cache
+.hugo_build.lock
+
+# Node (si tu ajoutes des outils JS plus tard)
+node_modules/
+
+# MacOS files
+.DS_Store
+
+# IDE / OS
+.vscode/
+.idea/
+
+# Go modules
+go.sum

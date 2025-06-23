@@ -1,17 +1,26 @@
 baseURL = "https://netarchitect.cloud/"
 languageCode = "fr"
 title = "Net Architect"
-theme = "hugo-clarity"
+theme = ["github.com/chipzoller/hugo-clarity"]
 enableRobotsTXT = true
+
+[module]
+  [[module.imports]]
+    path = "github.com/chipzoller/hugo-clarity"
 
 [params]
   description = "Blog technique sobre et élégant par Kevin Allioli"
   author = "Kevin Allioli"
   darkMode = true
-  showReadingTime = true
+  showReadingTime = false
   showToc = true
+  codeLineNumbers = true
 
 [markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
   [markup.highlight]
     style = "github"
     noClasses = false
+
