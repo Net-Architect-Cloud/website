@@ -4,7 +4,7 @@ date: 2021-12-07T08:00:00-05:00
 author: "Kevin Allioli"
 tags: ["openstack", "cloud", "tutoriel"]
 categories: ["cloud"]
-image: "/assets/img/headers/premiere-instance-openstack.webp"
+thumbnail = "images/openstack/premiere-instance-thumb.webp"
 description: "Tutoriel pas-à-pas pour créer une première instance OpenStack sur Infomaniak"
 draft: false
 ---
