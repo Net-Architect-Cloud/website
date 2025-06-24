@@ -9,12 +9,26 @@ enableRobotsTXT = true
     path = "github.com/chipzoller/hugo-clarity"
 
 [params]
+  enableSearch = true
+  dateFormat = "02 January 2006"
   description = "Blog technique sobre et élégant par Kevin Allioli"
   author = "Kevin Allioli"
   darkMode = true
   showReadingTime = false
   showToc = true
   codeLineNumbers = true
+  
+  comments = true
+  giscus = true
+  giscusRepo = "Net-Architect-Cloud/website"
+  giscusRepoId = "R_kgDOO_9SBA"
+  giscusCategory = "Comments"
+  giscusCategoryId = "DIC_kwDOO_9SBM4Cr8ZL"
+  giscusMapping = "pathname"
+  giscusReactionsEnabled = "0"
+  giscusTheme = "preferred_color_scheme"
+  giscusLang = "fr"
+
 
 [markup]
   [markup.goldmark]
