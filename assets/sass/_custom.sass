@@ -1,3 +1,6 @@
+$bio-box-bg-light: #f9f9f9
+
+
 .image_thumbnail
   border-radius: 0.5rem
 
@@ -20,7 +23,10 @@
     flex: 1
 
 .bio-box
-  background-color: #f9f9f9
+  background-color: $bio-box-bg-light
   padding: 1.5rem
   border-radius: 1rem
   box-shadow: 0 1px 3px rgba(0,0,0,0.05)
+
+html[data-mode="dim"] .bio-box
+  background: var(--post-bg)
