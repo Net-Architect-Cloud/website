@@ -5,7 +5,8 @@ author: "Kevin Allioli"
 tags: ["openstack", "cloud", "tutoriel"]
 categories: ["cloud"]
 thumbnail: "assets/img/headers/premiere-instance-openstack.webp"
-abstract: "Résumé personnalisé qui s'affiche sur la home ou les listes."
+abstract: "Découvrez comment déployer votre première instance OpenStack étape par étape : création, configuration réseau, sécurité, accès SSH et gestion. Un guide clair pour bien débuter sur n’importe quelle plateforme OpenStack."
+description: "Découvrez comment déployer votre première instance OpenStack étape par étape : création, configuration réseau, sécurité, accès SSH et gestion. Un guide clair pour bien débuter sur n’importe quelle plateforme OpenStack."
 draft: false
 ---
 

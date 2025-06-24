@@ -21,6 +21,10 @@ enableRobotsTXT = true
     [markup.goldmark.renderer]
       unsafe = true
   [markup.highlight]
-    style = "github"
+    codeFences = true
+    guessSyntax = true
+    style = "monokai"
+    lineNoStart = 1
+    lineNos = true
+    lineNumbersInTable = false
     noClasses = false
-
