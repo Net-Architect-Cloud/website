@@ -5,11 +5,6 @@ draft: false
 showDate: false
 showShare: false
 showReadTime: false
-menu:
-  main:
-    weight: 10
-    identifier: about
-    name: À propos
 ---
 
 {{< about-columns >}}
