@@ -5,6 +5,7 @@ draft: false
 showDate: false
 showShare: false
 showReadTime: false
+comments: false
 ---
 
 {{< about-columns >}}
