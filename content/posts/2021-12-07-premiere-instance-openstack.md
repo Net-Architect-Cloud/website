@@ -2,7 +2,7 @@
 title: "Déployer sa première instance OpenStack !"
 date: 2021-12-07T08:00:00-05:00
 author: "Kevin Allioli"
-tags: ["openstack", "cloud", "tutoriel"]
+tags: ["openstack", "cloud"]
 categories: ["cloud"]
 thumbnail: "assets/img/headers/premiere-instance-openstack.webp"
 abstract: "Découvrez comment déployer votre première instance OpenStack étape par étape : création, configuration réseau, sécurité, accès SSH et gestion. Un guide clair pour bien débuter sur n’importe quelle plateforme OpenStack."
@@ -114,4 +114,4 @@ sudo poweroff
 
 ## 🔗 Autres tutoriels
 
-⚙️  Retrouvez tous nos tutoriels sur [https://linit.io](https://linit.io)
+⚙️  Retrouvez tous nos tutoriels sur [https://netarchitect.cloud](https://netarchitect.cloud)
