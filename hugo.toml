@@ -42,3 +42,9 @@ enableRobotsTXT = true
     lineNos = true
     lineNumbersInTable = false
     noClasses = false
+
+[outputs]
+home = ["HTML", "RSS", "JSON"]
+
+[pagination]
+pagerSize = 10
