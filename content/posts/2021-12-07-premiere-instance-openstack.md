@@ -110,8 +110,7 @@ sudo poweroff
 
 ## 🐦 On en parle ici
 
-{{< embedtweet "https://twitter.com/linit_io/status/1468252426524409861" >}}
-
+{{< x user="linit_io" id="1468252426524409861" >}}
 
 ## 🔗 Autres tutoriels
 

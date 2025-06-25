@@ -17,6 +17,7 @@ enableRobotsTXT = true
   showReadingTime = false
   showToc = true
   codeLineNumbers = true
+  mobileNavigation = "left"
   
   comments = true
   giscus = true
@@ -48,3 +49,7 @@ home = ["HTML", "RSS", "JSON"]
 
 [pagination]
 pagerSize = 10
+
+[services]
+  [services.x]
+    disableInlineCSS = false
