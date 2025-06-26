@@ -17,6 +17,7 @@ enableRobotsTXT = true
   showReadingTime = false
   showToc = true
   codeLineNumbers = true
+  mobileNavigation = "left"
   
   comments = true
   giscus = true
@@ -26,7 +27,7 @@ enableRobotsTXT = true
   giscusCategoryId = "DIC_kwDOO_9SBM4Cr8ZL"
   giscusMapping = "pathname"
   giscusReactionsEnabled = "0"
-  giscusTheme = "preferred_color_scheme"
+  giscusTheme = "cobalt"
   giscusLang = "fr"
 
 
@@ -42,3 +43,13 @@ enableRobotsTXT = true
     lineNos = true
     lineNumbersInTable = false
     noClasses = false
+
+[outputs]
+home = ["HTML", "RSS", "JSON"]
+
+[pagination]
+pagerSize = 10
+
+[services]
+  [services.x]
+    disableInlineCSS = false
