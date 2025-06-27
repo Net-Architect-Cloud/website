@@ -48,7 +48,7 @@ enableRobotsTXT = true
 home = ["HTML", "RSS", "JSON"]
 
 [pagination]
-pagerSize = 2
+pagerSize = 8
 
 [services]
   [services.x]
