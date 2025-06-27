@@ -6,6 +6,11 @@ body
     &:hover
       fill: #FD4EF0
 
+html[data-mode="dim"] .follow
+  svg
+    &:hover
+      fill: #FD4EF0
+
 .page-item.active
   a
     background: #FD4EF0  
@@ -19,14 +24,26 @@ body
 .post_item
   box-shadow: 0 4px 16px rgba(0,0,0,0.06)
   transition: transform 0.2s ease, box-shadow 0.2s ease
+  border: solid 1px #f0f0f0
   
   &:hover
     transform: translateY(-4px)
     box-shadow: 0 6px 20px rgba(0,0,0,0.08)
 
+html[data-mode="dim"] .post_item
+  border: unset
+
 .pale
   p
     padding: 0 0 0.8rem 0
+
+.search
+  border: solid 1px #f2f2f2
+  border-radius: 0.5rem
+
+html[data-mode="dim"] .search
+  border: unset
+  border-radius: unset
 
 // Style pour l'image de profil uniquement sur la page À propos
 .about-two-column
