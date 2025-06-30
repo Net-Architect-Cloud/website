@@ -3,6 +3,16 @@
 body 
   max-width : 100%
 
+.page-item.active
+  a
+    background: $secondary
+
+.to_top
+  svg
+    opacity: unset
+  &:hover
+    background: $secondary
+
 // Navbar customization
 
 .nav_item
@@ -71,52 +81,23 @@ html[data-mode="dim"] .search
 .nav_button
   padding: 0.2rem 0.8rem
   font-size: 0.8rem
-  margin: 0.5rem;
+  margin: 0.5rem
 
   &_translucent
-  background-color: rgba($theme, 0.15)
-  color: $theme
-  border: 1px solid transparent
+    background-color: rgba($theme, 0.15)
+    color: $theme
+    border: 1px solid transparent
 
+    // Hover du lien
+    &:hover
+      background-color: $theme
+      border: 1px solid $theme
+      color: #fff
 
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.to_top
-  &:hover
-    background: #b180d7
-
-
-     
-
-  
-.page-item.active
-  a
-    background: #b180d7
-
-
-
+      // Et effet en même temps sur le span
+      .button_tally
+        background-color: $secondary
+        color: #fff
 
 // About page customization
 
@@ -156,4 +137,3 @@ html[data-mode="dim"] .bio-box
 
     .profile-pic
       margin: 0 auto
-
