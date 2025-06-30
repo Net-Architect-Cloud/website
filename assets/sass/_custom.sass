@@ -1,29 +1,25 @@
+// Global page customization
+
 body 
   max-width : 100%
+
+// Navbar customization
+
+.nav_item
+  &:hover
+    color: $secondary
 
 .follow
   svg
     &:hover
-      fill: #b180d7
+      fill: $secondary
 
 html[data-mode="dim"] .follow
   svg
     &:hover
-      fill: #b180d7
+      fill: &secondary
 
-.nav_item
-  &:hover
-    color: #b180d7
-
-.page-item.active
-  a
-    background: #b180d7
-    
-
-.image_thumbnail
-  border-radius: 0.5rem
-   box-shadow: 0 4px 16px rgba(0,0,0,0.06)
-
+// Posts resume on primary page
 
 .post_item
   box-shadow: 0 4px 16px rgba(0,0,0,0.06)
@@ -35,10 +31,30 @@ html[data-mode="dim"] .follow
 
 html[data-mode="dim"] .post_item
   border: unset
+.image_thumbnail
+  border-radius: 0.5rem
+   box-shadow: 0 4px 16px rgba(0,0,0,0.06)
+
+.button
+  &_translucent
+    background-color: rgba($secondary, 0.15)
+    color: $secondary
+    border: 1px solid transparent
+
+.post_tag
+  &:hover
+    background-color: $secondary
+    border: 1px solid $secondary
 
 .pale
   p
     padding: 0 0 0.8rem 0
+
+.post_content
+  a:not(.button):hover
+    color: $secondary
+
+// Sidebar customization
 
 .search
   border: solid 1px #f2f2f2
@@ -48,26 +64,69 @@ html[data-mode="dim"] .search
   border: unset
   border-radius: unset
 
-.button
-  &:hover
-    background-color: #b180d7
-    border: solid 1px #b180d7
-   
+.nav_button
+  padding: 0.2rem 0.8rem
+  font-size: 0.8rem
+  margin: 0.5rem;
 
-.button
-  &:focus
-    background-color: #b180d7
-    border: solid 1px #b180d7
+  &_translucent
+  background-color: rgba($theme, 0.15)
+  color: $theme
+  border: 1px solid transparent
 
-.post_content
-  a:not(.button):hover
-    color: #b180d7
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .to_top
   &:hover
     background: #b180d7
 
-// Style pour l'image de profil uniquement sur la page À propos
+
+     
+
+  
+.page-item.active
+  a
+    background: #b180d7
+
+
+
+
+// About page customization
+
+.bio-box
+  background-color: var(--post-bg)
+  padding: 1.5rem
+  border-radius: 0.75rem
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06)
+  border: solid 1px #f0f0f0
+
+html[data-mode="dim"] .bio-box
+  background: var(--post-bg)
+  border: unset
+
 .about-two-column
   display: flex
   flex-wrap: wrap
@@ -81,9 +140,8 @@ html[data-mode="dim"] .search
     img
       width: 100%
       border-radius: 0.75rem
-     
-
-  .bio-text
+  
+.bio-text
     flex: 1
 
 @media (max-width: 768px)
@@ -95,13 +153,3 @@ html[data-mode="dim"] .search
     .profile-pic
       margin: 0 auto
 
-.bio-box
-  background-color: var(--post-bg)
-  padding: 1.5rem
-  border-radius: 0.75rem
-  box-shadow: 0 4px 16px rgba(0,0,0,0.06)
-  border: solid 1px #f0f0f0
-
-html[data-mode="dim"] .bio-box
-  background: var(--post-bg)
-  border: unset

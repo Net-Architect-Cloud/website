@@ -6,7 +6,6 @@ tags:
   - openstack
   - vmware
   - migration
-  - virt-v2v
   - cloud
 categories:
   - cloud
