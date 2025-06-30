@@ -4,11 +4,14 @@ date: 2021-12-07T08:00:00-05:00
 author: "Kevin Allioli"
 tags: ["openstack", "cloud"]
 categories: ["cloud"]
-thumbnail: "assets/img/headers/premiere-instance-openstack.webp"
+url: premiere-instance-openstack
+thumbnail: "assets/img/headers/first-instance.webp"
 abstract: "Découvrez comment déployer votre première instance OpenStack étape par étape : création, configuration réseau, sécurité, accès SSH et gestion. Un guide clair pour bien débuter sur n’importe quelle plateforme OpenStack."
 description: "Découvrez comment déployer votre première instance OpenStack étape par étape : création, configuration réseau, sécurité, accès SSH et gestion. Un guide clair pour bien débuter sur n’importe quelle plateforme OpenStack."
 draft: false
 ---
+
+------------
 
 Dans ce tutoriel, je vais vous montrer comment créer votre première instance sur OpenStack en utilisant le cloud public Infomaniak. Bien que j'utilise la plateforme Infomaniak pour cette démonstration, les étapes sont similaires sur n'importe quelle plateforme OpenStack.
 

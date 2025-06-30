@@ -2,18 +2,16 @@
 title: "Migrer de VMware vers OpenStack"
 date: 2025-06-24T10:00:00-05:00
 author: "Kevin Allioli"
-tags:
-  - openstack
-  - vmware
-  - migration
-  - cloud
-categories:
-  - cloud
-thumbnail: "assets/img/headers/vmware-openstack-migration.webp"
+tags: ["openstack", "vmware", "migration", "cloud"]
+categories: ["cloud"]
+url: migrer-de-vmware-a-openstack
+thumbnail: "assets/img/headers/vmware-to-openstack.webp"
 abstract: "Découvrez comment migrer efficacement vos machines virtuelles depuis VMware ESXi vers OpenStack. Une approche claire, reproductible, et indépendante du système d’exploitation."
 description: "Découvrez comment migrer efficacement vos machines virtuelles depuis VMware ESXi vers OpenStack. Une approche claire, reproductible, et indépendante du système d’exploitation."
 draft: false
 ---
+
+------------
 
 Dans cette vidéo, je vous montre comment migrer une **machine virtuelle VMware (ESXi) vers OpenStack** en utilisant l’outil open source `virt-v2v`. Ce guide s’applique quelle que soit la VM à convertir : serveur applicatif, base de données, frontend ou autre, qu’il s’agisse de Linux, Windows ou tout autre OS.
 

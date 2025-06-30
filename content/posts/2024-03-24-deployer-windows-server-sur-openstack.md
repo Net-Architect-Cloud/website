@@ -5,10 +5,13 @@ date: 2024-03-24T08:00:00-05:00
 author: "Kevin Allioli"
 tags: ["openstack", "windows", "cloud"]
 categories: ["cloud"]
-thumbnail: "assets/img/headers/openstack-windows-server.webp"
+url: deployer-windows-server-sur-openstack
+thumbnail: "assets/img/headers/windows-openstack.webp"
 abstract: "Apprenez à déployer une machine virtuelle Windows Server sur OpenStack. Ce guide vous accompagne pas à pas, de la création de l’instance à la connexion RDP, avec gestion des clés et configuration réseau."
 description: "Apprenez à déployer une machine virtuelle Windows Server sur OpenStack. Ce guide vous accompagne pas à pas, de la création de l’instance à la connexion RDP, avec gestion des clés et configuration réseau."
 draft: false
+---
+
 ------------
 
 Dans ce tutoriel, vous allez découvrir comment déployer une **instance Windows Server sur une infrastructure OpenStack**. Nous utiliserons pour la démonstration une interface graphique Horizon, mais les étapes décrites sont valables sur n’importe quelle plateforme compatible.
