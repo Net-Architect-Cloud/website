@@ -1,0 +1,58 @@
+{{ if .Site.Params.giscus }}
+  <div id="giscus_container">
+    <div id="giscus"></div>
+  </div>
+
+  <script>
+    const giscusAttributes = {
+      "src": "https://giscus.app/client.js",
+      "data-repo": "{{ .Site.Params.giscusRepo }}",
+      "data-repo-id": "{{ .Site.Params.giscusRepoId }}",
+      "data-category": "{{ .Site.Params.giscusCategory }}",
+      "data-category-id": "{{ .Site.Params.giscusCategoryId }}",
+      "data-mapping": "{{ .Site.Params.giscusMapping | default "pathname" }}",
+      "data-strict": "0",
+      "data-reactions-enabled": "{{ .Site.Params.giscusReactionsEnabled | default "1" }}",
+      "data-emit-metadata": "0",
+      "data-input-position": "top",
+      "data-theme": "preferred_color_scheme", // fallback
+      "data-lang": "{{ .Site.Params.giscusLang | default "fr" }}",
+      "crossorigin": "anonymous",
+      "async": "true"
+    };
+
+    function getCurrentGiscusTheme() {
+      const mode = document.documentElement.getAttribute('data-mode');
+      return mode === "dim" ? "dark_dimmed" : "light";
+    }
+
+    function injectGiscus() {
+      const giscusContainer = document.getElementById("giscus");
+      const script = document.createElement("script");
+      Object.entries(giscusAttributes).forEach(([key, val]) => script.setAttribute(key, val));
+      script.setAttribute("data-theme", getCurrentGiscusTheme());
+      giscusContainer.innerHTML = ""; // reset
+      giscusContainer.appendChild(script);
+    }
+
+    function updateGiscusTheme() {
+      const iframe = document.querySelector("iframe.giscus-frame");
+      if (!iframe) return;
+      iframe.contentWindow.postMessage({
+        setConfig: {
+          theme: getCurrentGiscusTheme()
+        }
+      }, "https://giscus.app");
+    }
+
+    injectGiscus();
+
+    // Watch for theme change via data-mode mutation
+    const observer = new MutationObserver((mutations) => {
+      for (const m of mutations) {
+        if (m.attributeName === "data-mode") updateGiscusTheme();
+      }
+    });
+    observer.observe(document.documentElement, { attributes: true });
+  </script>
+{{ end }}
