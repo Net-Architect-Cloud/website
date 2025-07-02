@@ -1,58 +1,85 @@
 {{ if .Site.Params.giscus }}
-  <div id="giscus_container">
-    <div id="giscus"></div>
-  </div>
+<div id="giscus-comments"></div>
 
-  <script>
-    const giscusAttributes = {
-      "src": "https://giscus.app/client.js",
-      "data-repo": "{{ .Site.Params.giscusRepo }}",
-      "data-repo-id": "{{ .Site.Params.giscusRepoId }}",
-      "data-category": "{{ .Site.Params.giscusCategory }}",
-      "data-category-id": "{{ .Site.Params.giscusCategoryId }}",
-      "data-mapping": "{{ .Site.Params.giscusMapping | default "pathname" }}",
-      "data-strict": "0",
-      "data-reactions-enabled": "{{ .Site.Params.giscusReactionsEnabled | default "1" }}",
-      "data-emit-metadata": "0",
-      "data-input-position": "top",
-      "data-theme": "preferred_color_scheme", // fallback
-      "data-lang": "{{ .Site.Params.giscusLang | default "fr" }}",
-      "crossorigin": "anonymous",
-      "async": "true"
+<script>
+  function getThemeFromAttribute() {
+    const mode = document.documentElement.getAttribute("data-mode");
+    const theme = mode === "dim" ? "dark_dimmed" : "light";
+    console.log("[Giscus] Mode HTML :", mode, "| Thème déduit :", theme);
+    return theme;
+  }
+
+  function loadGiscus(theme) {
+    const container = document.getElementById("giscus-comments");
+    if (!container) return;
+
+    container.innerHTML = ""; // Nettoyage si reload
+
+    const script = document.createElement("script");
+    script.src = "https://giscus.app/client.js";
+    script.setAttribute("data-repo", "{{ .Site.Params.giscusRepo }}");
+    script.setAttribute("data-repo-id", "{{ .Site.Params.giscusRepoId }}");
+    script.setAttribute("data-category", "{{ .Site.Params.giscusCategory }}");
+    script.setAttribute("data-category-id", "{{ .Site.Params.giscusCategoryId }}");
+    script.setAttribute("data-mapping", "{{ .Site.Params.giscusMapping | default "pathname" }}");
+    script.setAttribute("data-strict", "0");
+    script.setAttribute("data-reactions-enabled", "{{ .Site.Params.giscusReactionsEnabled | default "1" }}");
+    script.setAttribute("data-emit-metadata", "0");
+    script.setAttribute("data-input-position", "top");
+    script.setAttribute("data-theme", theme);
+    script.setAttribute("data-lang", "{{ .Site.Params.giscusLang | default "fr" }}");
+    script.setAttribute("data-loading", "lazy");
+    script.setAttribute("crossorigin", "anonymous");
+    script.async = true;
+
+    container.appendChild(script);
+
+    console.log("[Giscus] Script injecté avec le thème :", theme);
+  }
+
+  function updateGiscusTheme(theme) {
+    const iframe = document.querySelector("iframe.giscus-frame");
+    if (!iframe) {
+      console.warn("[Giscus] iframe introuvable pour changement de thème.");
+      return;
+    }
+
+    const message = {
+      giscus: {
+        setConfig: {
+          theme: theme
+        }
+      }
     };
 
-    function getCurrentGiscusTheme() {
-      const mode = document.documentElement.getAttribute('data-mode');
-      return mode === "dim" ? "dark_dimmed" : "light";
+    try {
+      iframe.contentWindow.postMessage(message, "*");
+      console.log("[Giscus] postMessage envoyé avec thème :", theme);
+    } catch (err) {
+      console.error("[Giscus] Erreur postMessage :", err);
     }
+  }
 
-    function injectGiscus() {
-      const giscusContainer = document.getElementById("giscus");
-      const script = document.createElement("script");
-      Object.entries(giscusAttributes).forEach(([key, val]) => script.setAttribute(key, val));
-      script.setAttribute("data-theme", getCurrentGiscusTheme());
-      giscusContainer.innerHTML = ""; // reset
-      giscusContainer.appendChild(script);
-    }
+  // Chargement initial
+  document.addEventListener("DOMContentLoaded", () => {
+    const theme = getThemeFromAttribute();
+    loadGiscus(theme);
+  });
 
-    function updateGiscusTheme() {
-      const iframe = document.querySelector("iframe.giscus-frame");
-      if (!iframe) return;
-      iframe.contentWindow.postMessage({
-        setConfig: {
-          theme: getCurrentGiscusTheme()
-        }
-      }, "https://giscus.app");
-    }
-
-    injectGiscus();
-
-    // Watch for theme change via data-mode mutation
-    const observer = new MutationObserver((mutations) => {
-      for (const m of mutations) {
-        if (m.attributeName === "data-mode") updateGiscusTheme();
-      }
+  // Toggle par input checkbox (ex: #mode)
+  const toggleInput = document.getElementById("mode");
+  if (toggleInput) {
+    toggleInput.addEventListener("change", () => {
+      const html = document.documentElement;
+      const isChecked = toggleInput.checked;
+      const newMode = isChecked ? "dim" : "lit";
+      html.setAttribute("data-mode", newMode);
+      const newTheme = newMode === "dim" ? "dark_dimmed" : "light";
+      console.log("[Giscus] Toggle activé. data-mode =", newMode);
+      setTimeout(() => updateGiscusTheme(newTheme), 200);
     });
-    observer.observe(document.documentElement, { attributes: true });
-  </script>
+  } else {
+    console.warn("[Giscus] #mode non trouvé (toggle).");
+  }
+</script>
 {{ end }}
