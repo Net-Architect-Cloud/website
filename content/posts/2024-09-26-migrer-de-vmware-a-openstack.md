@@ -144,6 +144,9 @@ openstack volume unset --property hw_machine_type <ID_VOLUME>
 - [Documentation OpenStack](https://docs.openstack.org/)
 - [Article original Infomaniak](https://news.infomaniak.com/migrer-vmware-server-vers-openstack/)
 
+## 🐦 On en parle ici
+
+{{< x user="linit_io" id="1839365173460734102" >}}
 
 ## 🔗 Autres tutoriels
 

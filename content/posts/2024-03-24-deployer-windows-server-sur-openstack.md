@@ -108,6 +108,10 @@ Une fois les tests terminés, pensez à :
 * [Documentation OpenStack](https://docs.openstack.org/)
 * [Client Remote Desktop Microsoft](https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients)
 
+## 🐦 On en parle ici
+
+{{< x user="linit_io" id="1771990472921108536" >}}
+
 ## 🔗 Autres tutoriels
 
 🌐 Découvrez tous nos guides pratiques sur [https://netarchitect.cloud](https://netarchitect.cloud)
