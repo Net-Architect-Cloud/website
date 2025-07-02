@@ -1,7 +1,7 @@
 // Global page customization
 
 body 
-  max-width : 100%
+  max-width: 100%
 
 .page-item.active
   a
@@ -9,7 +9,7 @@ body
 
 .to_top
   svg
-    opacity: unset
+    opacity: 1
   &:hover
     background: $secondary
 
@@ -27,23 +27,27 @@ body
 html[data-mode="dim"] .follow
   svg
     &:hover
-      fill: &secondary
+      fill: $secondary
 
 // Posts resume on primary page
 
+$post-shadow: 0 4px 16px rgba(0, 0, 0, 0.06)
+$post-shadow-hover: 0 6px 20px rgba(0, 0, 0, 0.08)
+
 .post_item
-  box-shadow: 0 4px 16px rgba(0,0,0,0.06)
+  box-shadow: $post-shadow
   transition: transform 0.2s ease, box-shadow 0.2s ease
   border: solid 1px #f0f0f0
   
   &:hover
-    box-shadow: 0 6px 20px rgba(0,0,0,0.08)
+    box-shadow: $post-shadow-hover
 
 html[data-mode="dim"] .post_item
   border: 1px solid #232323
+
 .image_thumbnail
   border-radius: 0.5rem
-   box-shadow: 0 4px 16px rgba(0,0,0,0.06)
+  box-shadow: $post-shadow
 
 .button
   &_translucent
@@ -88,13 +92,11 @@ html[data-mode="dim"] .search
     color: $theme
     border: 1px solid transparent
 
-    // Hover du lien
     &:hover
       background-color: $theme
       border: 1px solid $theme
       color: #fff
 
-      // Et effet en même temps sur le span
       .button_tally
         background-color: $secondary
         color: #fff
@@ -105,7 +107,7 @@ html[data-mode="dim"] .search
   background-color: var(--post-bg)
   padding: 1.5rem
   border-radius: 0.75rem
-  box-shadow: 0 4px 16px rgba(0,0,0,0.06)
+  box-shadow: $post-shadow
   border: solid 1px #f0f0f0
 
 html[data-mode="dim"] .bio-box
@@ -117,17 +119,17 @@ html[data-mode="dim"] .bio-box
   flex-wrap: wrap
   gap: 2rem
   align-items: center
-  margin-bottom: 2rem
-  margin-top: 2rem
+  margin: 2rem 0
 
   .profile-pic
     flex: 0 0 160px
+
     img
       width: 100%
       border-radius: 0.75rem
-  
+
 .bio-text
-    flex: 1
+  flex: 1
 
 @media (max-width: 768px)
   .about-two-column
@@ -137,7 +139,7 @@ html[data-mode="dim"] .bio-box
 
     .profile-pic
       margin: 0 auto
-  
+
   .excerpt_thumbnail
     display: block
     margin-bottom: 1rem
