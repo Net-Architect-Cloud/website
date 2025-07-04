@@ -9,6 +9,7 @@ enableRobotsTXT = true
     path = "github.com/chipzoller/hugo-clarity"
 
 [params]
+  logo = "assets/img/logos/logo.png"
   enableSearch = true
   dateFormat = "02 January 2006"
   description = "Blog technique sobre et élégant par Kevin Allioli"
