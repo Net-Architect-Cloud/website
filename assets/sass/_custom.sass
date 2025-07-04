@@ -48,6 +48,9 @@ $post-shadow-hover: 0 6px 20px rgba(0, 0, 0, 0.08)
 html[data-mode="dim"] .post_item
   border: 1px solid #232323
 
+html[data-mode="light"] .post_item
+  border: solid 1px #f0f0f0
+
 .image_thumbnail
   border-radius: 0.5rem
   box-shadow: $post-shadow
@@ -85,6 +88,10 @@ html[data-mode="dim"] .search
   border: unset
   border-radius: unset
 
+html[data-mode="light"] .search
+  border: solid 1px #f2f2f2
+  border-radius: 0.5rem
+
 .nav_button
   padding: 0.2rem 0.8rem
   font-size: 0.8rem
@@ -116,6 +123,9 @@ html[data-mode="dim"] .search
 html[data-mode="dim"] .bio-box
   background: var(--post-bg)
   border: unset
+
+html[data-mode="light"] .bio-box
+  border: solid 1px #f0f0f0
 
 .about-two-column
   display: flex
