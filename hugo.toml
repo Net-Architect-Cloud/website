@@ -19,6 +19,7 @@ enableRobotsTXT = true
   showToc = true
   codeLineNumbers = true
   mobileNavigation = "left"
+  centerLogo = false
   
   comments = true
   giscus = true
