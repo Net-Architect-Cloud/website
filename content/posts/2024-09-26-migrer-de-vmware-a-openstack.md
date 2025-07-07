@@ -1,6 +1,6 @@
 ---
 title: "Migrer de VMware vers OpenStack"
-date: 2025-06-24T10:00:00-05:00
+date: 2024-09-26T10:00:00-05:00
 author: "Kevin Allioli"
 tags: ["openstack", "vmware", "migration", "cloud"]
 categories: ["cloud"]

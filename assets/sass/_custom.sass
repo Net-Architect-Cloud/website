@@ -34,22 +34,15 @@ html[data-mode="dim"] .follow
 
 // Posts resume on primary page
 
-$post-shadow: 0 4px 16px rgba(0, 0, 0, 0.06)
-$post-shadow-hover: 0 6px 20px rgba(0, 0, 0, 0.08)
+$post-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.08)
+$post-shadow-hover: 0 0.4rem 1.2rem rgba(0, 0, 0, 0.12)
 
 .post_item
   box-shadow: $post-shadow
   transition: transform 0.2s ease, box-shadow 0.2s ease
-  border: solid 1px #f0f0f0
   
   &:hover
     box-shadow: $post-shadow-hover
-
-html[data-mode="dim"] .post_item
-  border: 1px solid #232323
-
-html[data-mode="light"] .post_item
-  border: solid 1px #f0f0f0
 
 .image_thumbnail
   border-radius: 0.5rem
@@ -88,8 +81,6 @@ html[data-mode="dim"] .search
   border: solid 1px $border-dark
 
 html[data-mode="light"] .search
-  border: solid 1px #f2f2f2
-  border-radius: 0.5rem
 
 .nav_button
   padding: 0.2rem 0.8rem
@@ -117,14 +108,9 @@ html[data-mode="light"] .search
   padding: 1.5rem
   border-radius: 0.75rem
   box-shadow: $post-shadow
-  border: solid 1px #f0f0f0
 
 html[data-mode="dim"] .bio-box
   background: var(--post-bg)
-  border: unset
-
-html[data-mode="light"] .bio-box
-  border: solid 1px #f0f0f0
 
 .about-two-column
   display: flex
