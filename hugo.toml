@@ -4,6 +4,7 @@ title = "Net Architect"
 theme = ["github.com/chipzoller/hugo-clarity"]
 enableRobotsTXT = true
 
+
 [module]
   [[module.imports]]
     path = "github.com/chipzoller/hugo-clarity"
